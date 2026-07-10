@@ -1,0 +1,79 @@
+@import './fonts.css';
+@import './tailwind.css';
+@import './theme.css';
+
+@layer utilities {
+  /* Radial dot mesh background */
+  .bg-mesh-grid {
+    background-image: radial-gradient(rgba(255, 255, 255, 0.04) 1.2px, transparent 1.2px);
+    background-size: 24px 24px;
+  }
+
+  /* Radial glow flare helper */
+  .bg-glow-radial {
+    background: radial-gradient(circle at center, rgba(255, 106, 136, 0.12) 0%, rgba(255, 106, 136, 0) 70%);
+  }
+
+  /* Premium Text Gradient helper */
+  .text-gradient-rose {
+    background: linear-gradient(135deg, #FFFFFF 0%, #FFF3F5 40%, #FFB199 80%, #FF6A88 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .text-gradient-accent {
+    background: linear-gradient(135deg, #FF6A88 0%, #FF8E53 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  /* Real-time pulse animation */
+  @keyframes heartbeat {
+    0%, 100% {
+      transform: scale(1);
+      opacity: 0.9;
+      box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+    }
+    50% {
+      transform: scale(1.1);
+      opacity: 1;
+      box-shadow: 0 0 8px 3px rgba(16, 185, 129, 0.4);
+    }
+  }
+
+  .pulse-success {
+    animation: heartbeat 2s infinite ease-in-out;
+  }
+
+  /* High-end glass panel structure */
+  .glass-panel {
+    background: rgba(255, 255, 255, 0.015);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 1.5rem;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .glass-panel-hover {
+    &:hover {
+      background: rgba(255, 255, 255, 0.035);
+      border-color: rgba(255, 106, 136, 0.25);
+      box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.5), 0 0 25px rgba(255, 106, 136, 0.04);
+      transform: translateY(-4px);
+    }
+  }
+
+  /* Infinite marquee speed control */
+  @keyframes marquee {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-50%); }
+  }
+
+  .animate-marquee-scroll {
+    display: flex;
+    width: max-content;
+    animation: marquee 25s linear infinite;
+  }
+}
+
