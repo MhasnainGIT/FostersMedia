@@ -64,7 +64,7 @@ export function LandingPage() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="lg:col-span-7 space-y-6"
+            className="lg:col-span-12 space-y-6"
           >
             <div className="inline-flex items-center space-x-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-md">
               <Sparkles className="w-4 h-4 text-[#FF6A88]" />
@@ -99,39 +99,6 @@ export function LandingPage() {
                   Book an Event
                 </Button>
               </Link>
-            </div>
-          </motion.div>
-
-          
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="lg:col-span-5 relative"
-          >
-            <div className="glass-panel p-6 border-white/10 shadow-2xl relative overflow-hidden space-y-6">
-              <div className="absolute top-0 right-0 w-32 h-32 bg-[#FF6A88]/10 rounded-full blur-2xl pointer-events-none" />
-              <div className="space-y-4">
-                <h3 className="font-bold text-xl text-white flex items-center gap-3">
-                  <img
-                    src="/logo-fostersmedia.png"
-                    alt="Fosters Media"
-                    className="h-6 w-auto object-contain"
-                    loading="eager"
-                  />
-                  Featured Creators
-                </h3>
-                <p className="text-sm text-white/60">Explore top talent and campaign-ready influencers handpicked for your brand.</p>
-              </div>
-
-              <div className="w-full flex items-center justify-center">
-                <img
-                  src="/logo-fostersmedia.png"
-                  alt="Fosters Media"
-                  className="w-40 h-auto object-contain"
-                  loading="eager"
-                />
-              </div>
             </div>
           </motion.div>
         </div>
